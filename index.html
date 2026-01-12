@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Pythonianos</title>
+  </head>
+
+  <body class="body">
+   
+     <!-- Barra superior mínima -->
+    <div class="barra-superior navegacion-principal">
+      <div class="barra-contenido">
+        <button
+          class="btn boton-indice"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#indiceLibro"
+          aria-controls="indiceLibro"
+          aria-label="Abrir índice"
+        >
+          ☰
+        </button>
+  
+        <span class="marca-sitio">Pythonianos</span>
+      </div>
+      
+    </div>
+     <!-- HEADER -->
+    <header class="encabezado">
+      <!-- MENÚ LATERAL (ÍNDICE) -->
+      <div
+      class="offcanvas offcanvas-start menu-indice"
+      tabindex="-1"
+      id="indiceLibro"
+      aria-labelledby="indiceLibroLabel"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      data-bs-focus="false"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="indiceLibroLabel">Índice</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <nav class="lista-indice">
+            <ul class="list-unstyled">
+              <li><a href="#variables">01 · Variables</a></li>
+              <li><a href="#strings">02 · Strings</a></li>
+              <li><a href="#listas">03 · Listas</a></li>
+              <li><a href="#tuplas">04 · Tuplas</a></li>
+              <li><a href="#sets">05 · Sets</a></li>
+              <li><a href="#diccionarios">06 · Diccionarios</a></li>
+              <li><a href="#condicionales">07 · Condicionales</a></li>
+              <li><a href="#bucles">08 · Bucles</a></li>
+              <li><a href="#funciones">09 · Funciones</a></li>
+              <li><a href="#clases">10 · Clases</a></li>
+              <li><a href="#excepciones">11 · Excepciones</a></li>
+              <li><a href="#modulos">12 · Módulos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- PORTADA -->
+      <section class="portada-libro">
+        <div class="container">
+          <div class="portada-contenido">
+            <h1 class="portada-titulo">Python Básico</h1>
+
+            <p class="portada-descripcion">
+              Una guía clara y práctica para aprender Python desde cero,
+              entendiendo qué hace el código y por qué funciona.
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="contenido-principal py-5">
+      <div class="container">
+
+        <!-- INTRODUCCIÓN -->
+        <section class="intro-libro">
+          <div class="container">
+            <div class="intro-contenido">
+              <h1 class="intro-titulo">
+                Un gran poder conlleva una gran responsabilidad
+              </h1>
+
+              <p class="intro-texto">
+                Este libro no es solo una colección de ejemplos en Python. Es
+                una invitación a pensar, probar, equivocarse y entender qué está
+                pasando realmente detrás del código.
+              </p>
+
+              <p class="intro-texto">
+                Python es simple, pero no superficial. Acá vas a aprender a
+                usarlo con criterio, entendiendo qué hacés y por qué lo hacés,
+                antes de copiar y pegar soluciones.
+              </p>
+
+              <p class="intro-nota">
+                La responsabilidad no está en el lenguaje, sino en quien lo
+                utiliza.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN CÓDIGO PYTHON -->
+
+        <section class="seccion-libro">
+          <!-- CAPÍTULO  01-->
+          <article class="variables" id="variables">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">01</span>
+              <h2 class="capitulo-titulo">Variables</h2>
+              <p class="capitulo-intro">
+                Cómo Python almacena datos, infiere tipos y permite
+                reasignación.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">1.1 Concepto y tipos básicos</h3>
+
+              <p class="bloque-texto">
+                En Python las variables se crean asignando un valor con el
+                operador
+                <code>=</code>. No es necesario declarar el tipo de dato.
+              </p>
+
+              <pre class="bloque-codigo">
+<code>
+mi_variable = "Texto"
+mi_numero = 5
+mi_boolean = True
+
+print(type(mi_numero))
+</code>
+      </pre>
+
+              <aside class="nota nota-buena">
+                <strong>💡Buena práctica</strong><br />
+                Usá nombres descriptivos como <code>edad_usuario</code> o
+                <code>total_ventas</code>.
+              </aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">1.2 Conversión de tipos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+numero = 5
+texto = str(numero)
+
+print(texto)
+print(type(texto))
+</code>
+      </pre>
+
+              <aside class="nota nota-error">
+                <strong>❌ Error común</strong><br />
+                <code>int("hola")</code> produce un <em>ValueError</em>.
+              </aside>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  02-->
+          <article class="strings" id="strings">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">02</span>
+              <h2 class="capitulo-titulo">Strings (cadena de texto)</h2>
+              <p class="capitulo-intro">
+                Cómo Python representa texto, trabaja con caracteres y permite
+                manipular cadenas de forma flexible.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.1 Creación y longitud</h3>
+
+              <p class="bloque-texto">
+                Los strings se definen usando comillas y permiten representar
+                texto. La función <code>len()</code> se utiliza para conocer
+                cuántos caracteres contiene una cadena.
+              </p>
+
+              <pre class="bloque-codigo">
+<code>
+
+var_string = "Mi cadena de texto"
+var_second_string = "Mi segunda cadena de texto"
+
+print(len(var_string))         # Largo de la primera cadena
+print(len(var_second_string))  # Largo de la segunda cadena
+
+</code>
+      </pre>
+
+              <aside class="nota nota-buena">
+                <strong>💡Buena práctica</strong><br />
+                Usá nombres descriptivos como <code>edad_usuario</code> o
+                <code>total_ventas</code>.
+              </aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.2 Formateo de strings</h3>
+
+              <pre class="bloque-codigo">
+<code>
+name, surname, age = "Juan", "Ignacio", 28
+
+# Concatenación con comas (funciona pero es feo) — NO USAR
+print("Mi nombre es ", name, surname, " y tengo ", age, " años.")
+
+# Interpolación clásica con .format() — NO RECOMENDADO
+print("Me llamo {} {} y tengo {} años.".format(name, surname, age))
+
+# Formato estilo C — NO RECOMENDADO
+print("Yo soy %s %s y tengo %d años." % (name, surname, age))
+
+# f-string — FORMA MODERNA Y RECOMENDADA
+print(f"Holis, yo soy {name} {surname} y tengo {age} años.")
+</code>
+      </pre>
+
+              <aside class="nota nota-buena">
+                <strong>💡Buena práctica</strong><br />
+                Usá <code>f</code> para formatear texto: son más legibles,
+                modernos y expresivos.
+              </aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.3 Desempaquetado de caracteres</h3>
+
+              <pre class="bloque-codigo">
+<code>
+lenguaje = "Python"
+a, b, c, d, e, f = lenguaje   # Cada letra se asigna a una variable
+
+print(a, b, c, d, e, f)       # P y t h o n
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.4 Slicing (rebanado)</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print(lenguaje[1:3])     # 'yt'  → desde índice 1 hasta 3 (sin incluir)
+print(lenguaje[:4])      # 'Pyth' → desde inicio a índice 4
+print(lenguaje[2:])      # 'thon'
+print(lenguaje[-3:])     # 'hon'  → últimos 3 caracteres
+print(lenguaje[-4:-1])   # 'tho'
+print(lenguaje[0:6:2])   # 'Pto'  → saltando de a 2
+print(lenguaje[::-1])    # 'nohtyP' → string invertido
+print(lenguaje[4:1:-1])  # 'oht' → desde índice 4 hacia atrás
+
+copia = lenguaje[:]      # Copia exacta del string
+print(copia)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.5 Métodos importantes de strings</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print(lenguaje.capitalize())   # 'Python' → primera mayúscula
+print(lenguaje.upper())        # 'PYTHON'
+print(lenguaje.lower())        # 'python'
+print(lenguaje.title())        # 'Python' → estilo título
+print(lenguaje.count("t"))     # Cuenta cuántas veces aparece 't'
+print(lenguaje.startswith("Py"))  # True
+print(lenguaje.endswith("on"))    # True
+print(lenguaje.isnumeric())       # False
+print("123".isnumeric())          # True
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.6 Búsqueda y reemplazo</h3>
+
+              <pre class="bloque-codigo">
+<code>
+texto = "Hola mundo, mundo hermoso"
+
+print(texto.find("mundo"))      # 5   → primer índice donde aparece
+print(texto.rfind("mundo"))     # 11  → última aparición
+print(texto.replace("mundo", "planeta"))
+# 'Hola planeta, planeta hermoso'
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.7 División, unión y espacios</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# DIVISIÓN Y UNIÓN
+cadena = "manzana,pera,banana"
+print(cadena.split(","))        # ['manzana', 'pera', 'banana']
+
+lista_frutas = ["manzana", "pera", "banana"]
+print(" - ".join(lista_frutas)) # 'manzana - pera - banana'
+
+# QUITAR ESPACIOS
+texto2 = "   hola python   "
+print(texto2.strip())   # "hola python" → quita espacios al principio y final
+print(texto2.lstrip())  # quita solo izquierda
+print(texto2.rstrip())  # quita solo derecha
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">2.8 Pertenencia</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("Py" in lenguaje)     # True
+print("py" in lenguaje)     # False (case sensitive)
+print("z" not in lenguaje)  # True
+</code>
+      </pre>
+              <aside class="nota nota-error">
+                <strong>❌ Error común</strong><br />
+                Olvidar que las comparaciones de strings son case sensitive:
+                <code>"Py"</code> y <code>"py"</code> no son iguales.
+              </aside>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  03-->
+          <article class="listas" id="listas">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">03</span>
+              <h2 class="capitulo-titulo">Listas</h2>
+              <p class="capitulo-intro">
+                Cómo Python agrupa datos, mantiene colecciones ordenadas y
+                permite acceder y modificar sus elementos.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">3.1 Creación y tipos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Las listas son colecciones ordenadas y mutables.
+# Se pueden crear con list() o con corchetes [], pero lo más común es [].
+
+mi_lista = list()   # Crea una lista vacía (poco usado)
+mi_otra_lista = []  # Crea una lista vacía (forma recomendada)
+
+# Sobrescribimos mi_lista con valores numéricos
+mi_lista = [25, 33, 45, 18, 24, 26, 28, 17]
+
+# Sobrescribimos mi_otra_lista con datos de distintos tipos
+mi_otra_lista = [28, 1.79, 'Juan', 'Ignacio']
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">3.2 Información básica</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# --- Información sobre mi_lista ---
+print(type(mi_lista))   # <class 'list'> → es una lista
+print(mi_lista)         # Muestra la lista completa
+print(len(mi_lista))    # Cantidad de elementos en la lista
+
+# --- Información sobre mi_otra_lista ---
+print(mi_otra_lista)        # Muestra la lista
+print(len(mi_otra_lista))   # Cantidad de elementos
+print(type(mi_otra_lista))  # <class 'list'>
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">3.3 Acceso por índice</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print(mi_otra_lista[0])   # Primer elemento → 28
+print(mi_otra_lista[1])   # Segundo elemento → 1.79
+
+# Índices negativos: comienzan desde el final
+print(mi_otra_lista[-1])  # Último elemento → 'Ignacio'
+print(mi_otra_lista[-3])  # Tercero desde el final → 1.79
+print(mi_otra_lista[-4])  # Equivale al índice 0 → 28
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">3.4 Métodos de listas</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Lista de ejemplo
+lista_num = [1, 2, 3, 4]
+
+# append() → Agrega un elemento al final
+lista_num.append(5)
+print(lista_num)   # [1, 2, 3, 4, 5]
+
+# insert() → Inserta un elemento en una posición específica
+lista_num.insert(1, 99)
+print(lista_num)   # [1, 99, 2, 3, 4, 5]
+
+# extend() → Agrega varios elementos juntos (otra lista)
+lista_num.extend([6, 7, 8])
+print(lista_num)   # [1, 99, 2, 3, 4, 5, 6, 7, 8]
+
+# pop() → Elimina un elemento por índice
+lista_num.pop()
+print(lista_num)   # [1, 99, 2, 3, 4, 5, 6, 7]
+
+lista_num.pop(1)
+print(lista_num)   # [1, 2, 3, 4, 5, 6, 7]
+
+# remove() → Elimina la primera aparición de un valor
+lista_num.remove(3)
+print(lista_num)   # [1, 2, 4, 5, 6, 7]
+
+# clear() → Vacía completamente la lista
+# lista_num.clear()
+# print(lista_num)  # []
+
+# index() → Devuelve el índice donde aparece un valor
+lista_str = ["a", "b", "c", "b"]
+print(lista_str.index("b"))   # 1
+
+# count() → Cuenta cuántas veces aparece un valor
+print(lista_str.count("b"))   # 2
+
+# sort() → Ordena la lista (modifica la original)
+numeros = [4, 1, 7, 2]
+numeros.sort()
+print(numeros)   # [1, 2, 4, 7]
+
+# reverse() → Invierte el orden de la lista
+numeros.reverse()
+print(numeros)   # [7, 4, 2, 1]
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">3.5 Funciones útiles con listas</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# len() → Devuelve la cantidad de elementos
+len([10, 20, 30])              # 3
+
+# sum() → Suma todos los elementos numéricos
+sum([10, 20, 30])              # 60
+
+# max() → Devuelve el valor máximo
+max([4, 9, 2, 7])              # 9
+
+# min() → Devuelve el valor mínimo
+min([4, 9, 2, 7])              # 2
+
+# sorted() → Devuelve una nueva lista ordenada (no modifica la original)
+sorted([4, 1, 7, 3])           # [1, 3, 4, 7]
+
+# list() → Convierte un iterable en lista
+list("hola")                   # ['h', 'o', 'l', 'a']
+
+# type() → Muestra el tipo del objeto
+type([1, 2, 3])                # <class 'list'>
+
+# any() → True si al menos un elemento es True
+any([False, False, True])      # True
+
+# all() → True si todos los elementos son True
+all([True, True, True])        # True
+
+# range() → Genera una secuencia de números (muy usado con listas)
+list(range(5))                 # [0, 1, 2, 3, 4]
+</code>
+      </pre>
+
+              <aside class="nota nota-buena">
+                <strong>💡Buena práctica</strong><br />
+                Para crear listas transformadas, usá list-comprehensions: son
+                más legibles y pythonicas que un
+                <code>for</code> + <code>append</code>.
+              </aside>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  04-->
+          <article class="tuplas" id="tuplas">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">04</span>
+              <h2 class="capitulo-titulo">Tuplas (tuple)</h2>
+              <p class="capitulo-intro">
+                Colecciones ordenadas e inmutables utilizadas para agrupar datos
+                que no deben modificarse.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.1 Concepto e inmutabilidad</h3>
+
+              <p class="bloque-texto">
+                Las tuplas son estructuras de datos **inmutables**. Son como las
+                listas, pero **NO** permiten cambiar sus valores.
+              </p>
+
+              <pre class="bloque-codigo">
+<code>
+mi_tupla = (10, 20, 30, 40)
+print(mi_tupla)          # (10, 20, 30, 40)
+print(type(mi_tupla))    # <class 'tuple'>
+
+# Acceso por índice
+print(mi_tupla[0])       # 10
+print(mi_tupla[2])       # 30
+
+# Largo de la tupla
+print(len(mi_tupla))     # 4
+
+# Inmutabilidad
+# mi_tupla[1] = 99  # ❌ ERROR: las tuplas no se pueden modificar
+# Tampoco se pueden agregar ni borrar elementos
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.2 Tupla de un solo elemento</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Para crear una tupla con un solo elemento
+tupla_uno = (5,)
+print(type(tupla_uno))   # <class 'tuple'>
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.3 Conversión lista ↔ tupla</h3>
+
+              <pre class="bloque-codigo">
+<code>
+mi_lista = [1, 2, 3]
+mi_tupla_convertida = tuple(mi_lista)
+print(mi_tupla_convertida)   # (1, 2, 3)
+
+tupla_a_lista = list(mi_tupla)
+print(tupla_a_lista)         # [10, 20, 30, 40]
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.4 Desempaquetado y tipos mixtos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+persona = ("Juan", "Pérez", 28)
+nombre, apellido, edad = persona
+
+print(nombre)    # Juan
+print(apellido)  # Pérez
+print(edad)      # 28
+
+# Tuplas con diferentes tipos de datos
+mezcla = ("texto", 45, False, 3.14)
+print(mezcla)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.5 Slicing y métodos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+valores = (1, 2, 3, 4, 5)
+print(valores[1:4])    # (2, 3, 4)
+print(valores[::-1])   # (5, 4, 3, 2, 1)
+
+numeros = (1, 2, 2, 3, 4, 2)
+print(numeros.count(2))  # 3
+print(numeros.index(3))  # 3
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">4.6 Tuplas anidadas y uso típico</h3>
+
+              <pre class="bloque-codigo">
+<code>
+anidada = (1, (2, 3), (4, 5, 6))
+print(anidada[1][1])   # 3
+
+# Uso típico de tuplas
+# ✔ Se usan cuando NO queremos que los datos cambien
+# ✔ Muy comunes para empaquetar datos fijos
+# ✔ Usadas en return de funciones (devolver múltiples valores)
+
+def coordenadas():
+    return (35.6, 42.1)
+
+x, y = coordenadas()
+print(x, y)            # 35.6 42.1
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  05-->
+          <article class="sets" id="sets">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">05</span>
+              <h2 class="capitulo-titulo">Sets</h2>
+
+              <p class="capitulo-intro">
+                Un set (conjunto) es una colección de datos con las siguientes
+                características:
+              </p>
+
+              <ul class="capitulo-lista">
+                <li>No mantiene un orden definido</li>
+                <li>No utiliza índices</li>
+                <li>No permite elementos repetidos</li>
+                <li>Es modificable (se pueden agregar o quitar valores)</li>
+              </ul>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">5.1 Concepto y creación</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Set con elementos
+mi_set = {"Juan", 20, True}
+print("Set inicial:", mi_set)
+
+# Set vacío (¡Ojo! {} crea un diccionario)
+set_vacio = set()
+print("Set vacío:", set_vacio)
+
+# mi_set[0]  # ❌ Esto da error porque no hay orden
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">5.2 Agregar y eliminar elementos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# AGREGAR ELEMENTOS
+mi_set.add("Python")
+print("Después de add('Python'):", mi_set)
+# Si el elemento existe, no se duplica.
+
+# ELIMINAR ELEMENTOS
+
+# remove() elimina, pero da error si no está
+mi_set.remove("Python")
+print("Después de remove('Python'):", mi_set)
+
+# discard() elimina, pero NO da error si no existe
+mi_set.discard("Python")
+print("Después de discard('Python') (no pasa nada):", mi_set)
+
+# pop() elimina y devuelve un elemento aleatorio
+elemento_eliminado = mi_set.pop()
+print("Elemento eliminado con pop():", elemento_eliminado)
+print("Set luego de pop():", mi_set)
+
+# clear() vacía el set por completo
+mi_set.clear()
+print("Set luego de clear():", mi_set)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">5.3 Operaciones entre sets</h3>
+
+              <pre class="bloque-codigo">
+<code>
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Unión
+union = set1 | set2
+print("Unión (set1 | set2):", union)
+
+# Intersección
+interseccion = set1 & set2
+print("Intersección (set1 & set2):", interseccion)
+
+# Diferencia (elementos de set1 que no están en set2)
+diferencia = set1 - set2
+print("Diferencia (set1 - set2):", diferencia)
+
+# Diferencia simétrica (lo que no se repite entre ambos)
+dif_simetrica = set1 ^ set2
+print("Diferencia simétrica (set1 ^ set2):", dif_simetrica)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">5.3 Operaciones entre sets</h3>
+
+              <pre class="bloque-codigo">
+<code>
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Unión
+union = set1 | set2
+print("Unión (set1 | set2):", union)
+
+# Intersección
+interseccion = set1 & set2
+print("Intersección (set1 & set2):", interseccion)
+
+# Diferencia (elementos de set1 que no están en set2)
+diferencia = set1 - set2
+print("Diferencia (set1 - set2):", diferencia)
+
+# Diferencia simétrica (lo que no se repite entre ambos)
+dif_simetrica = set1 ^ set2
+print("Diferencia simétrica (set1 ^ set2):", dif_simetrica)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">5.4 Pertenencia e inmutabilidad</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("'Python' in set1:", "Python" in set1)
+print("3 in set1:", 3 in set1)
+
+# SOLO ACEPTAN ELEMENTOS INMUTABLES
+set_valido = {1, 2, "hola", (1, 2)}
+print("Set válido:", set_valido)
+
+# Ejemplo inválido (esto daría error si lo descomentás)
+# set_invalido = {[1, 2], 3}  # ❌ Las listas no se pueden poner en un set
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">
+                5.5 Eliminar duplicados de una lista
+              </h3>
+
+              <pre class="bloque-codigo">
+<code>
+lista = [1, 1, 2, 3, 3, 4]
+set_unico = set(lista)
+print("Set sin duplicados:", set_unico)
+
+# Si necesitás volver a convertirlo en lista
+lista_sin_dupes = list(set_unico)
+print("Lista sin duplicados:", lista_sin_dupes)
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  06-->
+          <article class="diccionario" id="diccionario">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">06</span>
+              <h2 class="capitulo-titulo">Diccionarios</h2>
+              <p class="capitulo-intro">
+                Los diccionarios funcionan con estructura <code>clave: valor</code>. 
+              <ul class="capitulo-lista">
+                <li>Las claves deben ser inmutables
+                (<code>str</code>, <code>int</code>,<code> float</code
+                >,<code>tuple</code>)</li>
+                <li>Los valores pueden ser cualquier cosa:
+                listas, funciones, diccionarios, etc.</li>
+              </ul>
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.1 Concepto y creación</h3>
+
+              <pre class="bloque-codigo">
+<code>
+diccionario = {
+    "nombre": "Juani",
+    "edad": 25,
+    "habilidades": ["Python", "JavaScript"],
+    "equipo": {"teclado": "Redragon", "mouse": "Logitech"},
+}
+
+print("DICCIONARIO INICIAL:", diccionario)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.2 Acceder a valores</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n--- ACCESO A VALORES ---")
+print("Nombre:", diccionario["nombre"])
+print("Edad:", diccionario.get("edad"))  # Uso de .get para evitar errores
+print("Intento de clave inexistente:", diccionario.get("altura", "No existe"))
+</code>
+      </pre>
+
+              <aside class="nota nota-buena">
+                <strong>💡Buena práctica</strong><br />
+                Usá <code>dict.get(clave,valor_por_defecto)</code> cuando no estás seguro de si la clave existe.Evitás <em>KeyError</em>.
+              </aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.3 Agregar, modificar y eliminar</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# AGREGAR Y MODIFICAR
+diccionario["ciudad"] = "Mar del Plata"   # Crear
+diccionario["edad"] = 26                  # Modificar
+
+print("\nDiccionario actualizado:", diccionario)
+
+# ELIMINAR ELEMENTOS
+diccionario.pop("ciudad")   # Eliminar por clave
+elemento = diccionario.pop("edad", "No existe")  # pop con valor por defecto
+
+print("\nDespués de eliminar datos:", diccionario)
+print("Elemento eliminado:", elemento)
+
+ultimo = diccionario.popitem()  # Elimina el último par
+print("popitem() eliminó:", ultimo)
+print("Estado actual:", diccionario)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.4 Métodos útiles y <code>update</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n--- MÉTODOS ÚTILES ---")
+print("Claves:", list(diccionario.keys()))
+print("Valores:", list(diccionario.values()))
+print("Items:", list(diccionario.items()))
+
+# UPDATE → FUSIONAR DICCIONARIOS
+extra = {"altura": 1.78, "peso": 76}
+diccionario.update(extra)
+print("\nDespués de update:", diccionario)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.5 <code>setdefault</code> y copias</h3>
+
+              <pre class="bloque-codigo">
+<code>
+diccionario.setdefault("nacionalidad", "Argentina")
+diccionario.setdefault("nombre", "No reemplaza")
+print("\nDespués de setdefault:", diccionario)
+
+copia = diccionario.copy()
+copia["nombre"] = "Carlos"
+print("\nOriginal:", diccionario)
+print("Copia modificada:", copia)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.6 Diccionarios anidados</h3>
+
+              <pre class="bloque-codigo">
+<code>
+mochila = {
+    "calculadora": {
+        "marca": "Casio",
+        "funciones": ["sumar", "restar", "multiplicar", "dividir"],
+        "encendida": False,
+    },
+    "regla": {
+        "longitud_cm": 30,
+        "material": "plástico",
+    },
+    "carpetas": {
+        "Matemática": 120,
+        "Lengua": 90,
+        "Historia": 100,
+    },
+}
+
+print("\nFunciones de la calculadora:", mochila["calculadora"]["funciones"])
+print("Hojas de Historia:", mochila["carpetas"]["Historia"])
+
+# MODIFICAR DICCIONARIOS ANIDADOS
+
+mochila["calculadora"]["cientifica"] = True
+mochila["carpetas"]["Geografía"] = 80
+
+print("\nMochila actualizada:", mochila)
+
+# RECORRER UN DICCIONARIO
+print("\n--- RECORRIENDO LA MOCHILA ---")
+for categoria, contenido in mochila.items():
+    print(f"- {categoria}: {contenido}")
+</code>
+      </pre>
+            </section>
+
+             <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.7 Crear diccionarios con <code>dict</code> y funciones como valores</h3>
+
+              <pre class="bloque-codigo">
+<code>
+auto = dict(marca="Peugeot", modelo=206, anio=2010)
+print("\nAuto:", auto)
+
+
+def sumar(a, b):
+    return a + b
+
+calculadora = {
+    "sumar": sumar,
+    "ultima_operacion": None,
+}
+
+resultado = calculadora["sumar"](10, 5)
+calculadora["ultima_operacion"] = resultado
+
+print("\nResultado suma:", resultado)
+print("Última operación:", calculadora["ultima_operacion"])
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.8 Dict comprehension y comprobaciones</h3>
+
+              <pre class="bloque-codigo">
+<code>
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {n: n**2 for n in numeros}
+print("\nCuadrados:", cuadrados)
+
+print("\n¿'marca' está en auto?:", "marca" in auto)
+print("¿'ruedas' está en auto?:", "ruedas" in auto)
+</code>
+      </pre>
+            </section>
+            
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.9 Ordenar, convertir y crear desde listas/tuplas</h3>
+
+              <pre class="bloque-codigo">
+<code>
+ordenado_clave = dict(sorted(diccionario.items()))
+print("\nOrdenado por clave:", ordenado_clave)
+
+ordenado_valor = dict(sorted(diccionario.items(), key=lambda item: str(item[1])))
+print("Ordenado por valor:", ordenado_valor)
+
+claves = list(diccionario.keys())
+valores = list(diccionario.values())
+pares = list(diccionario.items())
+
+print("\nClaves:", claves)
+print("Valores:", valores)
+print("Pares:", pares)
+
+lista_claves = ["marca", "modelo"]
+lista_valores = ["Fiat", "Palio"]
+auto2 = dict(zip(lista_claves, lista_valores))
+print("\nAuto creado desde listas:", auto2)
+
+pares = [("a", 1), ("b", 2)]
+dic_desde_pares = dict(pares)
+print("Diccionario desde pares:", dic_desde_pares)
+
+init = dict.fromkeys(["x", "y", "z"], 0)
+print("\nfromkeys:", init)
+
+temporal = {"a": 1, "b": 2}
+temporal.clear()
+print("Después de clear:", temporal)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">6.10 JSON ↔ dict</h3>
+
+              <pre class="bloque-codigo">
+<code>
+import json
+
+dic = {"nombre": "Juani", "curso": "Python"}
+
+json_txt = json.dumps(dic)
+print("\nConvertido a JSON:", json_txt)
+
+dic2 = json.loads(json_txt)
+print("JSON vuelto a dict:", dic2)
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  07-->
+          <article class="condicionales" id="condicionales">
+              <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">07</span>
+              <h2 class="capitulo-titulo">Condicionales</h2>
+              <p class="capitulo-intro">
+                Cómo Python evalúa condiciones y ejecuta diferentes bloques de código
+                según se cumplan o no ciertas reglas.
+              </p>
+            </header>
+
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">7.1 If, if/else, if/elif/else</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# IF simple
+edad = 20
+if edad >= 18:
+    print("Sos mayor de edad")
+
+# IF / ELSE
+temperatura = 15
+if temperatura > 20:
+    print("Hace calor")
+else:
+    print("Hace frío")
+
+# IF / ELIF / ELSE
+nota = 75
+if nota >= 90:
+    print("Excelente")
+elif nota >= 70:
+    print("Aprobado")
+else:
+    print("Desaprobado")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">7.2 Operadores lógicos y comparaciones</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Operadores lógicos (and, or, not)
+
+usuario = "Juani"
+clave = "1234"
+
+if usuario == "Juani" and clave == "1234":
+    print("Inicio correcto")
+
+if usuario == "Juani" or usuario == "Pepe":
+    print("Usuario reconocido")
+
+if not clave == "0000":
+    print("La clave no es 0000")
+
+# Comparaciones
+
+"""
+==  igual
+!=  distinto
+>   mayor que
+>=  mayor o igual
+<   menor que
+<=  menor o igual
+"""
+
+a = 10
+b = 20
+print(a == b)
+print(a != b)
+print(a < b)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">7.3 Condicionales anidados y operador ternario</h3>
+
+              <pre class="bloque-codigo">
+<code>
+edad = 30
+tiene_documento = True
+
+if edad >= 18:
+    if tiene_documento:
+        print("Puede ingresar")
+    else:
+        print("Le falta documento")
+else:
+    print("Es menor, no puede ingresar")
+
+# Operador ternario
+puntaje = 42
+resultado = "Aprobado" if puntaje >= 50 else "Desaprobado"
+print(resultado)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">7.4 Verificar existencias y <code>pass</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Verificar existencia en colecciones
+
+frutas = ["manzana", "banana", "pera"]
+if "banana" in frutas:
+    print("Hay banana")
+
+datos = {"nombre": "Juani", "edad": 25}
+if "edad" in datos:
+    print("Edad encontrada")
+
+# Uso de pass
+
+x = 10
+if x > 5:
+    pass  # Placeholder
+
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  08-->
+          <article class="bucles" id="bucles">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">08</span>
+              <h2 class="capitulo-titulo">Bucles / Loops / Ciclos</h2>
+              <p class="capitulo-intro">
+                Permiten ejecutar un bloque de código de forma repetida mientras se
+                cumpla una condición o se recorra una secuencia de datos.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">8.1 For básico y recorrer colecciones</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n=== FOR BÁSICO ===")
+for i in range(5):   # 0..4
+    print(i)
+
+print("\n=== RECORRER LISTA ===")
+frutas = ["manzana", "pera", "kiwi"]
+for fruta in frutas:
+    print(fruta)
+
+print("\n=== FOR CON ENUMERATE ===")
+colores = ["rojo", "azul", "verde"]
+for indice, color in enumerate(colores):
+    print(indice, color)
+
+print("\n=== RECORRER STRING ===")
+for letra in "Juani":
+    print(letra)
+
+print("\n=== RECORRER DICCIONARIO ===")
+persona = {"nombre": "Juani", "edad": 25}
+for clave, valor in persona.items():
+    print(clave, "=>", valor)
+
+print("\n=== RECORRER SET ===")
+numeros = {1, 2, 3, 4}
+for n in numeros:
+    print(n)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">8.2 <code>range()</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n=== USO DE range() ===")
+print(list(range(5)))          # 0..4
+print(list(range(1, 6)))       # 1..5
+print(list(range(0, 10, 2)))   # 0,2,4,6,8
+print(list(range(10, 0, -1)))  # 10..1
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">8.3 While y validación</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n=== WHILE BÁSICO ===")
+contador = 0
+while contador < 3:
+    print("Contador:", contador)
+    contador += 1
+
+print("\n=== VALIDAR UN NÚMERO ===")
+while True:
+    dato = input("Ingresa un número: ")
+    if dato.isdigit():   # verifica que sea solo números
+        numero = int(dato)
+        print("Ingresaste:", numero)
+        break
+    else:
+        print("Dato inválido, probá otra vez.")
+</code>
+      </pre>
+              <aside class="nota nota-error">
+                <strong>❌ Error común</strong><br />
+                <p>Olvidar actualizar la variable de control en un <code>while</code> puede producir un <em>bucle infinito</em>.</p>
+              </aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">8.4 <code>break</code>,<code>continue</code> y <code>else</code> en bucles</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n=== BREAK ===")
+for n in range(10):
+    if n == 5:
+        break
+    print(n)
+
+print("\n=== CONTINUE ===")
+for n in range(10):
+    if n % 2 == 0:
+        continue
+    print(n)  # solo impares
+
+print("\n=== ELSE EN BUCLE ===")
+for n in range(5):
+    print(n)
+else:
+    print("El bucle terminó SIN break")
+
+print("\n=== ELSE CON BÚSQUEDA ===")
+buscado = 7
+for n in range(5):
+    if n == buscado:
+        print("Encontrado")
+        break
+else:
+    print("No se encontró")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">8.5 Bucles anidados y list comprehensions</h3>
+
+              <pre class="bloque-codigo">
+<code>
+print("\n=== BUCLES ANIDADOS ===")
+for i in range(3):
+    for j in range(2):
+        print("i:", i, "j:", j)
+
+print("\n=== LIST COMPREHENSION ===")
+cuadrados = [x * x for x in range(10)]
+print("Cuadrados:", cuadrados)
+
+pares = [n for n in range(20) if n % 2 == 0]
+print("Pares:", pares)
+
+letras_mayus = [c.upper() for c in "juani"]
+print("Mayúsculas:", letras_mayus)
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  09-->
+          <article class="funciones" id="funciones">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">09</span>
+              <h2 class="capitulo-titulo">funciones</h2>
+              <p class="capitulo-intro">
+                Permiten agrupar instrucciones en bloques reutilizables, facilitando la
+                organización, lectura y mantenimiento del código.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.1 Función básica, parámetros y retorno</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Función básica sin parámetros
+def saludar():
+    print("Hola desde una función simple")
+
+saludar()
+
+# Función con parámetros
+def saludar_persona(nombre):
+    print(f"Hola {nombre}")
+
+saludar_persona("Juani")
+
+# Función con retorno
+def sumar(a, b):
+    return a + b
+
+resultado = sumar(10, 20)
+print("Resultado de la suma:", resultado)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.2 Valores por defecto y argumentos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Parámetros con valores por defecto
+def presentar(nombre="Invitado", edad=0):
+    print(f"Nombre: {nombre}, Edad: {edad}")
+
+presentar()
+presentar("Juani", 28)
+
+# Argumentos posicionales y nombrados
+def resta(a, b):
+    return a - b
+
+print(resta(50, 20))         # posicionales
+print(resta(b=20, a=50))     # keyword arguments
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.3 <code>*args</code> y <code>**kwargs</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+# *args → argumentos posicionales variables
+def suma_total(*numeros):
+    print("Números recibidos:", numeros)
+    return sum(numeros)
+
+print("Suma total:", suma_total(1, 2, 3, 4, 5))
+
+# **kwargs → argumentos nombrados variables
+def mostrar_info(**datos):
+    print("Datos recibidos:", datos)
+
+mostrar_info(nombre="Juani", edad=28, lenguaje="Python")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.4 Combinación completa de argumentos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+def ejemplo_completo(a, b, *args, c, d=10, **kwargs):
+    print("a:", a)
+    print("b:", b)
+    print("*args:", args)
+    print("c:", c)
+    print("d:", d)
+    print("**kwargs:", kwargs)
+
+ejemplo_completo(10, 20, 30, 40, c=100, nivel="Junior", activo=True)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.5 Lambdas y diccionario de funciones</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Funciones lambda (anónimas)
+cuadrado = lambda x: x * x
+print("Cuadrado de 5:", cuadrado(5))
+
+sumar_lambda = lambda a, b: a + b
+print("Suma lambda:", sumar_lambda(10, 5))
+
+# Diccionario con funciones
+calculadora = {
+    "sumar": lambda x, y: x + y,
+    "restar": lambda x, y: x - y,
+    "multiplicar": lambda x, y: x * y,
+    "dividir": lambda x, y: x / y if y != 0 else "Error: división por cero",
+}
+
+print("Calc sumar:", calculadora["sumar"](5, 5))
+print("Calc dividir:", calculadora["dividir"](10, 2))
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.6 Variables locales y globales</h3>
+
+              <pre class="bloque-codigo">
+<code>
+contador = 0
+
+def aumentar():
+    global contador
+    contador += 1
+
+aumentar()
+aumentar()
+print("Contador global:", contador)
+</code>
+      </pre>
+          <aside class="nota nota-error">
+            <strong>❌ Error común</strong><br />
+            <p>Abusar de <code>global</code> hace el código difícil de mantener.
+            Es preferible devolver valores y pasarlos como parámetros.
+              </p></aside>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.7 Docstrings</h3>
+
+              <pre class="bloque-codigo">
+<code>
+def multiplicar(a, b):
+    """
+    Multiplica dos números y retorna el resultado.
+    Ejemplo de una función con docstring.
+    """
+    return a * b
+
+print("Multiplicación:", multiplicar(3, 4))
+print("Docstring:", multiplicar.__doc__)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">9.8 Argumentos solo posicionales y solo por nombre</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Argumentos solo posicionales (/)
+# Todo argumento antes de "/" es POSICIONAL obligatorio.
+def solo_posicional(a, b, /):
+    print(a, b)
+
+solo_posicional(10, 20)
+
+# Argumentos solo por nombre (*)
+# Todo lo que viene después de "*" debe llamarse con nombre.
+def solo_nombre(*, x, y):
+    print(x, y)
+
+solo_nombre(x=100, y=200)
+
+# Mezcla total con restricciones
+def combinado(a, b, /, c, d=0, *, e, f=1):
+    print(a, b, c, d, e, f)
+
+combinado(1, 2, 3, d=50, e=999)
+</code>
+      </pre>
+            </section>
+
+          </article>
+
+          <!-- CAPÍTULO  10-->
+          <article class="clases" id="clases">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">10</span>
+              <h2 class="capitulo-titulo">Clases</h2>
+              <p class="capitulo-intro">
+                Cómo Python permite modelar objetos del mundo real agrupando datos
+                (atributos) y comportamientos (métodos) en una misma estructura.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.1 Clase básica y constructor</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# 1. Clase básica
+class Persona:
+    pass
+
+p = Persona()  # objeto creado a partir de la clase
+
+# 2. Constructor __init__
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre  # atributo del objeto
+        self.edad = edad
+
+p = Persona("Juani", 28)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.2 Métodos de instancia</h3>
+
+              <pre class="bloque-codigo">
+<code>
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def saludar(self):
+        print(f"Hola, soy {self.nombre}")
+
+p = Persona("Juani")
+p.saludar()
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.3 Atributos públicos, protegidos y privados</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Atributos públicos
+class Auto:
+    def __init__(self, marca):
+        self.marca = marca
+
+a = Auto("Ford")
+a.marca = "Toyota"
+
+# Atributo protegido (_)
+class Cuenta:
+    def __init__(self, saldo):
+        self._saldo = saldo
+
+# Atributo privado (__)
+class Usuario:
+    def __init__(self, password):
+        self.__password = password
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.4 Getters, setters y <code>@property</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Getter y Setter
+class Producto:
+    def __init__(self, precio):
+        self.__precio = precio
+
+    def get_precio(self):
+        return self.__precio
+
+    def set_precio(self, valor):
+        if valor > 0:
+            self.__precio = valor
+
+# property → forma pythonica
+class Producto:
+    def __init__(self, precio):
+        self._precio = precio
+
+    @property
+    def precio(self):
+        return self._precio
+
+    @precio.setter
+    def precio(self, valor):
+        if valor > 0:
+            self._precio = valor
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.5 Métodos de clase y estáticos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Método de clase @classmethod
+class Usuario:
+    tipo = "Normal"
+
+    @classmethod
+    def cambiar_tipo(cls, nuevo_tipo):
+        cls.tipo = nuevo_tipo
+
+# Método estático @staticmethod
+class Utilidades:
+    @staticmethod
+    def sumar(a, b):
+        return a + b
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.6 Herenci, <code>super()</code> y polimorfismo </h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Herencia
+class Animal:
+    def hablar(self):
+        print("Sonido genérico")
+
+class Perro(Animal):
+    def hablar(self):
+        print("Guau")
+
+# super()
+class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+class Gato(Animal):
+    def __init__(self, nombre, color):
+        super().__init__(nombre)
+        self.color = color
+
+# Polimorfismo
+class Pajaro:
+    def volar(self):
+        print("Vuelo normal")
+
+class Aguila(Pajaro):
+    def volar(self):
+        print("Vuelo alto")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">10.7 <code>__str__ y __repr__</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def __str__(self):
+        return f"Persona: {self.nombre}"
+
+class Punto:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"Punto(x={self.x}, y={self.y})"
+</code>
+      </pre>
+            </section>
+          </article>
+
+          <!-- CAPÍTULO  11-->
+          <article class="excepciones" id="excepciones">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">11</span>
+              <h2 class="capitulo-titulo">Excpciones</h2>
+              <p class="capitulo-intro">
+                Cómo Python maneja errores en tiempo de ejecución y permite controlar
+                situaciones inesperadas sin que el programa se detenga.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.1 Errores y <code>try/except</code> básico</h3>
+          
+              <pre class="bloque-codigo">
+<code>
+# Error sin manejar
+# print(10 / 0)   # ZeroDivisionError
+
+# try / except
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("No se puede dividir por cero")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.2 Capturar excepciones y usar variables</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Capturar cualquier excepción
+try:
+    x = int("abc")
+except Exception:
+    print("Ocurrió un error")
+
+# Guardar el error en una variable
+try:
+    x = int("abc")
+except ValueError as error:
+    print("Error:", error)
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.3 <code>else</code> y <code>finally</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+# else: se ejecuta si NO hubo error
+try:
+    x = int("10")
+except ValueError:
+    print("Error de conversión")
+else:
+    print("Conversión correcta:", x)
+
+# finally: se ejecuta siempre
+try:
+    archivo = open("archivo.txt")
+except FileNotFoundError:
+    print("Archivo no encontrado")
+finally:
+    print("Fin del bloque try")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.4 Múltiples excepciones y agrupación</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Múltiples excepciones
+try:
+    x = int("abc")
+    y = 10 / 0
+except ValueError:
+    print("Error de valor")
+except ZeroDivisionError:
+    print("División por cero")
+
+# Agrupar excepciones
+try:
+    x = int("abc")
+except (ValueError, TypeError):
+    print("Error de tipo o valor")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.5 <code>raise</code> y excepciones personalizadas</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# raise
+def validar_edad(edad):
+    if edad < 0:
+        raise ValueError("La edad no puede ser negativa")
+
+validar_edad(10)
+# validar_edad(-5)
+
+# Excepciones personalizadas
+class EdadInvalidaError(Exception):
+    pass
+
+def validar_edad(edad):
+    if edad < 0:
+        raise EdadInvalidaError("Edad inválida")
+
+# validar_edad(-1)
+</code>
+      </pre>
+            </section>
+            
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">11.6 Excepciones y funciones, <code>assert</code> y relazar</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# try / except en funciones
+def dividir(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Error: división por cero"
+
+print(dividir(10, 2))
+print(dividir(10, 0))
+
+# Controlar flujo con excepciones (usar con cuidado)
+try:
+    numero = int(input("Número: "))
+except ValueError:
+    print("No es un número")
+
+# finally + return
+def ejemplo():
+    try:
+        return 10
+    finally:
+        print("Siempre se ejecuta")
+
+print(ejemplo())
+
+# assert
+x = 10
+assert x > 0, "x debe ser mayor que 0"
+
+# Capturar excepción y relanzar
+try:
+    int("abc")
+except ValueError:
+    print("Error detectado")
+    raise
+</code>
+      </pre>
+            </section>
+            <aside class="nota nota-buena">
+            <strong>💡 Buenas prácticas con excepciones</strong><br />
+              <ul>
+                <li>Capturá errores específicos siempre que puedas.</li>
+                <li>Evitá <code>except:</code> vacío.</li>
+                <li>No ocultes errores graves sin al menos loguearlos.</li>
+              </ul>
+            </aside>
+
+          </article>
+
+          <!-- CAPÍTULO  12-->
+          <article class="moldulos" id="modulos">
+            <!-- CABECERA DEL CAPÍTULO -->
+            <header class="capitulo-header">
+              <span class="capitulo-indice">12</span>
+              <h2 class="capitulo-titulo">Módulos</h2>
+              <p class="capitulo-intro">
+                Cómo Python permite organizar el código en archivos reutilizables,
+                importar funcionalidades existentes y mantener proyectos más limpios,
+                ordenados y escalables.
+              </p>
+            </header>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">12.1 Concepto e <code>imports</code> básicos</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# Importar un módulo completo
+import math
+
+print(math.pi)
+print(math.sqrt(16))
+
+# Importar algo específico del módulo
+from math import pi, sqrt
+
+print(pi)
+print(sqrt(25))
+
+# Importar con alias
+import math as m
+
+print(m.pi)
+print(m.pow(2, 3))
+
+# Importar múltiples elementos
+from math import sin, cos, tan
+
+# Importar TODO (no recomendado)
+# from math import *
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">12.2 Crear y usar tu propio módulu</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# [utils.py](http://utils.py)
+def sumar(a, b):
+    return a + b
+
+def restar(a, b):
+    return a - b
+
+# Usar tu módulo
+import utils
+
+print(utils.sumar(5, 5))
+print(utils.restar(10, 3))
+
+# Importar funciones del módulo propio
+from utils import sumar
+
+print(sumar(10, 10))    
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">12.3 <code>__name__</code> y bloque principal</h3>
+
+              <pre class="bloque-codigo">
+<code>
+# archivo [principal.py](http://principal.py)
+print(__name__)
+
+if __name__ == "__main__":
+    print("Archivo ejecutado directamente")    
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">12.4 Paquetes y <code>__init__.py</code></h3>
+
+              <pre class="bloque-codigo">
+<code>
+mi_paquete/
+├── __init__.py
+├── [operaciones.py](http://operaciones.py)
+└── [mensajes.py](http://mensajes.py) 
+
+# Importar desde paquetes
+from mi_paquete.operaciones import sumar
+
+# mi_paquete/__init__.py
+print("Paquete cargado")
+</code>
+      </pre>
+            </section>
+
+            <!-- BLOQUE -->
+            <section class="bloque">
+              <h3 class="bloque-titulo">12.5 Módulos estándar comunes y utilidades </h3>
+
+              <pre class="bloque-codigo">
+<code>
+import sys       # sistema
+import os        # sistema operativo
+import datetime  # fechas
+import random    # números aleatorios
+
+# Ver qué trae un módulo
+import math
+print(dir(math))
+
+# help()
+help(math.sqrt)
+
+# sys.path → rutas donde Python busca módulos
+print(sys.path)
+
+# Recargar un módulo (debug)
+import importlib
+import utils
+importlib.reload(utils)
+</code>
+      </pre>
+            </section>
+          </article>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina mt-5 py-4 bg-light border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <p class="texto-footer mb-1">
+              Libro para Python — Material educativo
+            </p>
+            <p class="texto-footer text-muted mb-0">
+              Uso responsable y con fines educativos.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 text-md-end">
+            <p class="texto-footer mb-1">© 2026 — JuaniPerez</p>
+            <p class="texto-footer text-muted mb-0">
+              Desarrollado con HTML, CSS, JS y Bootstrap 5
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>

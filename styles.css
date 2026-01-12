@@ -1,0 +1,347 @@
+/* ==============================
+   ROOT
+================================ */
+:root {
+  /* Violetas */
+  --violet-dark: #7b1fa2;
+  --violet-main: #9c27b0;
+  --violet-light: #e1bee7;
+
+  /* Teal */
+  --teal-main: #009688;
+
+  /* Neutros */
+  --black: #212121;
+  --gray-dark: #757575;
+  --gray-light: #bdbdbd;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==============================
+   NAVEGACION
+================================ */
+
+.navegacion-principal {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  transition: box-shadow 0.3s ease;
+}
+
+.navegacion-principal.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Barra superior */
+.barra-superior {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+/* Contenido alineado a la izquierda */
+.barra-contenido {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* espacio entre botón y texto */
+  padding: 0.75rem 1rem; /* menos aire vertical */
+}
+
+/* Botón índice */
+.boton-indice {
+  border: none;
+  font-size: 1.25rem;
+  color: var(--black);
+}
+
+/* Marca */
+.marca-sitio {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ==============================
+   MENÚ LATERAL / ÍNDICE
+================================ */
+
+/* Offcanvas general */
+.menu-indice {
+  width: 260px; /* más angosto */
+  background-color: var(--white);
+}
+
+/* Header del offcanvas */
+.menu-indice .offcanvas-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.menu-indice .offcanvas-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Cuerpo */
+.menu-indice .offcanvas-body {
+  padding: 0.75rem 1rem;
+}
+
+/* Lista del índice */
+.lista-indice ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ítems */
+.lista-indice li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+.lista-indice a {
+  display: block;
+  padding: 0.35rem 0.25rem;
+  font-size: 0.9rem;
+  color: var(--black);
+  text-decoration: none; /* ❌ sin subrayado */
+  border-radius: 4px;
+}
+
+/* Hover */
+.lista-indice a:hover {
+  background-color: var(--violet-light);
+  color: var(--violet-dark);
+}
+
+/* Activo (para futuro) */
+.lista-indice a.activo {
+  font-weight: 600;
+  color: var(--violet-dark);
+}
+
+.menu-indice {
+  scroll-behavior: smooth;
+}
+
+.lista-indice a {
+  *font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+/* ==============================
+   HEADER / TITULOS 
+================================ */
+
+/* ==============================
+   PORTADA DEL LIBRO
+================================ */
+
+.portada-libro {
+  display: flex;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 5rem 0 10rem;
+}
+
+.portada-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1100px;
+}
+
+.portada-contenido {
+  max-width: 720px;
+}
+
+.portada-titulo {
+  font-size: 6.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+}
+
+.portada-descripcion {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  line-height: 1.8;
+  color: var(--gray-light);
+  max-width: 420px;
+  flex: 1;
+}
+
+/* ==============================
+   INTRODUCCIÓN — PRÓLOGO
+================================ */
+
+.intro-libro {
+  padding: 6rem 0 4rem;
+  background-color: var(--white);
+}
+
+.intro-contenido {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.intro-etiqueta {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet-dark);
+  margin-bottom: 1rem;
+}
+
+.intro-titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.intro-texto {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--gray-dark);
+  margin-bottom: 1.2rem;
+}
+
+.intro-nota {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--violet-dark);
+}
+
+/* ==============================
+   SECCIÓN LIBRO
+================================ */
+
+.seccion-libro {
+  padding: 6rem 1rem;
+  background-color: #f8f9fa;
+}
+
+/* ===== CAPÍTULO ===== */
+
+.capitulo {
+  max-width: 900px;
+  margin: 0 auto 8rem auto;
+}
+
+/* Header del capítulo */
+.capitulo-header {
+  margin-bottom: 4rem;
+  border-left: 6px solid var(--violet-dark);
+  padding-left: 1.5rem;
+}
+
+.capitulo-indice {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--gray-dark);
+}
+
+.capitulo-titulo {
+  font-size: 3rem;
+  margin: 0.3rem 0;
+  color: var(--black);
+}
+
+.capitulo-intro {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  max-width: 600px;
+}
+
+/* ===== BLOQUES ===== */
+
+.bloque {
+  margin-bottom: 4rem;
+}
+
+.bloque-titulo {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.bloque-texto {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+/* ===== CÓDIGO ===== */
+
+.bloque-codigo {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.bloque-codigo code {
+  background: none;
+  color: inherit;
+  font-family: "Fira Code", monospace;
+}
+
+/* ===== NOTAS ===== */
+
+.nota {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid;
+  border-radius: 6px;
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.nota-buena {
+  border-color: var(--teal-main);
+  background: rgba(0, 150, 136, 0.08);
+}
+
+.nota-error {
+  border-color: #e53935;
+  background: rgba(229, 57, 53, 0.08);
+}
+
+.capitulo-lista {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+
+  list-style: none; /* quitamos bullets default */
+}
+
+.capitulo-lista li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.4rem;
+
+  color: var(--gray-dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Bullet personalizado */
+.capitulo-lista li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+
+  color: var(--violet-main);
+  font-size: 1.2rem;
+  line-height: 1;
+}
