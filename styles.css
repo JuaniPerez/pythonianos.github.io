@@ -15,6 +15,7 @@
   --gray-dark: #757575;
   --gray-light: #bdbdbd;
   --white: #ffffff;
+  --bg-light: #f8f9fa;
 }
 
 body {
@@ -231,7 +232,7 @@ html {
 
 .seccion-libro {
   padding: 6rem 1rem;
-  background-color: #f8f9fa;
+  background-color: var(--bg-light);
 }
 
 /* ===== CAPÍTULO ===== */
@@ -299,7 +300,6 @@ html {
 .bloque-codigo code {
   background: none;
   color: inherit;
-  font-family: "Fira Code", monospace;
 }
 
 /* ===== NOTAS ===== */
