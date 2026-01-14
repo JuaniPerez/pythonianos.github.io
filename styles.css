@@ -63,6 +63,16 @@ html {
   color: var(--black);
 }
 
+.marca-sitio a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.marca-sitio a:hover {
+  color: var(--violet-dark);
+  transition: 0.2s;
+}
+
 /* Marca */
 .marca-sitio {
   font-weight: 600;
