@@ -1,6 +1,8 @@
 const linksIndice = document.querySelectorAll(".indice-link");
 const offcanvasEl = document.getElementById("indiceLibro");
 
+AOS.init();
+
 linksIndice.forEach((link) => {
   link.addEventListener("click", () => {
     const targetId = link.dataset.target;

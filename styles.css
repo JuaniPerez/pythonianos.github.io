@@ -17,6 +17,10 @@
   --white: #ffffff;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -128,7 +132,7 @@ html {
 }
 
 .lista-indice a {
-  *font-family: monospace;
+  font-family: "Inter", sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -322,7 +326,7 @@ html {
   margin-top: 1rem;
   padding-left: 1.5rem;
 
-  list-style: none; /* quitamos bullets default */
+  list-style: none;
 }
 
 .capitulo-lista li {
@@ -335,7 +339,6 @@ html {
   font-size: 0.95rem;
 }
 
-/* Bullet personalizado */
 .capitulo-lista li::before {
   content: "•";
   position: absolute;
@@ -344,4 +347,9 @@ html {
   color: var(--violet-main);
   font-size: 1.2rem;
   line-height: 1;
+}
+
+code,
+pre {
+  font-family: "JetBrains Mono", monospace;
 }

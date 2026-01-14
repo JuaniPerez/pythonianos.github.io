@@ -10,12 +10,16 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
+    <link
+  href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
+  rel="stylesheet"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <title>Pythonianos</title>
   </head>
 
-  <body class="body">
+  <body class="body data-bs-spy="scroll" data-bs-target=".lista-indice" data-bs-offset="120"">
    
      <!-- Barra superior mínima -->
     <div class="barra-superior navegacion-principal">
@@ -146,11 +150,11 @@
               <p class="bloque-texto">
                 En Python las variables se crean asignando un valor con el
                 operador
-                <code>=</code>. No es necesario declarar el tipo de dato.
+                <code class="language-python">=</code>. No es necesario declarar el tipo de dato.
               </p>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 mi_variable = "Texto"
 mi_numero = 5
 mi_boolean = True
@@ -161,8 +165,8 @@ print(type(mi_numero))
 
               <aside class="nota nota-buena">
                 <strong>💡Buena práctica</strong><br />
-                Usá nombres descriptivos como <code>edad_usuario</code> o
-                <code>total_ventas</code>.
+                Usá nombres descriptivos como <code class="language-python">edad_usuario</code> o
+                <code class="language-python">total_ventas</code>.
               </aside>
             </section>
 
@@ -171,7 +175,7 @@ print(type(mi_numero))
               <h3 class="bloque-titulo">1.2 Conversión de tipos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 numero = 5
 texto = str(numero)
 
@@ -182,7 +186,7 @@ print(type(texto))
 
               <aside class="nota nota-error">
                 <strong>❌ Error común</strong><br />
-                <code>int("hola")</code> produce un <em>ValueError</em>.
+                <code class="language-python">int("hola")</code> produce un <em>ValueError</em>.
               </aside>
             </section>
           </article>
@@ -205,12 +209,12 @@ print(type(texto))
 
               <p class="bloque-texto">
                 Los strings se definen usando comillas y permiten representar
-                texto. La función <code>len()</code> se utiliza para conocer
+                texto. La función <code class="language-python">len()</code> se utiliza para conocer
                 cuántos caracteres contiene una cadena.
               </p>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 
 var_string = "Mi cadena de texto"
 var_second_string = "Mi segunda cadena de texto"
@@ -223,8 +227,8 @@ print(len(var_second_string))  # Largo de la segunda cadena
 
               <aside class="nota nota-buena">
                 <strong>💡Buena práctica</strong><br />
-                Usá nombres descriptivos como <code>edad_usuario</code> o
-                <code>total_ventas</code>.
+                Usá nombres descriptivos como <code class="language-python">edad_usuario</code> o
+                <code class="language-python">total_ventas</code>.
               </aside>
             </section>
 
@@ -233,7 +237,7 @@ print(len(var_second_string))  # Largo de la segunda cadena
               <h3 class="bloque-titulo">2.2 Formateo de strings</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 name, surname, age = "Juan", "Ignacio", 28
 
 # Concatenación con comas (funciona pero es feo) — NO USAR
@@ -252,7 +256,7 @@ print(f"Holis, yo soy {name} {surname} y tengo {age} años.")
 
               <aside class="nota nota-buena">
                 <strong>💡Buena práctica</strong><br />
-                Usá <code>f</code> para formatear texto: son más legibles,
+                Usá <code class="language-python">f</code> para formatear texto: son más legibles,
                 modernos y expresivos.
               </aside>
             </section>
@@ -262,7 +266,7 @@ print(f"Holis, yo soy {name} {surname} y tengo {age} años.")
               <h3 class="bloque-titulo">2.3 Desempaquetado de caracteres</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 lenguaje = "Python"
 a, b, c, d, e, f = lenguaje   # Cada letra se asigna a una variable
 
@@ -276,7 +280,7 @@ print(a, b, c, d, e, f)       # P y t h o n
               <h3 class="bloque-titulo">2.4 Slicing (rebanado)</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 print(lenguaje[1:3])     # 'yt'  → desde índice 1 hasta 3 (sin incluir)
 print(lenguaje[:4])      # 'Pyth' → desde inicio a índice 4
 print(lenguaje[2:])      # 'thon'
@@ -297,7 +301,7 @@ print(copia)
               <h3 class="bloque-titulo">2.5 Métodos importantes de strings</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 print(lenguaje.capitalize())   # 'Python' → primera mayúscula
 print(lenguaje.upper())        # 'PYTHON'
 print(lenguaje.lower())        # 'python'
@@ -316,7 +320,7 @@ print("123".isnumeric())          # True
               <h3 class="bloque-titulo">2.6 Búsqueda y reemplazo</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 texto = "Hola mundo, mundo hermoso"
 
 print(texto.find("mundo"))      # 5   → primer índice donde aparece
@@ -332,7 +336,7 @@ print(texto.replace("mundo", "planeta"))
               <h3 class="bloque-titulo">2.7 División, unión y espacios</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 # DIVISIÓN Y UNIÓN
 cadena = "manzana,pera,banana"
 print(cadena.split(","))        # ['manzana', 'pera', 'banana']
@@ -354,7 +358,7 @@ print(texto2.rstrip())  # quita solo derecha
               <h3 class="bloque-titulo">2.8 Pertenencia</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 print("Py" in lenguaje)     # True
 print("py" in lenguaje)     # False (case sensitive)
 print("z" not in lenguaje)  # True
@@ -363,7 +367,7 @@ print("z" not in lenguaje)  # True
               <aside class="nota nota-error">
                 <strong>❌ Error común</strong><br />
                 Olvidar que las comparaciones de strings son case sensitive:
-                <code>"Py"</code> y <code>"py"</code> no son iguales.
+                <code class="language-python">"Py"</code> y <code class="language-python">"py"</code> no son iguales.
               </aside>
             </section>
           </article>
@@ -385,7 +389,7 @@ print("z" not in lenguaje)  # True
               <h3 class="bloque-titulo">3.1 Creación y tipos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 # Las listas son colecciones ordenadas y mutables.
 # Se pueden crear con list() o con corchetes [], pero lo más común es [].
 
@@ -406,7 +410,7 @@ mi_otra_lista = [28, 1.79, 'Juan', 'Ignacio']
               <h3 class="bloque-titulo">3.2 Información básica</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 # --- Información sobre mi_lista ---
 print(type(mi_lista))   # <class 'list'> → es una lista
 print(mi_lista)         # Muestra la lista completa
@@ -425,7 +429,7 @@ print(type(mi_otra_lista))  # <class 'list'>
               <h3 class="bloque-titulo">3.3 Acceso por índice</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 print(mi_otra_lista[0])   # Primer elemento → 28
 print(mi_otra_lista[1])   # Segundo elemento → 1.79
 
@@ -442,7 +446,7 @@ print(mi_otra_lista[-4])  # Equivale al índice 0 → 28
               <h3 class="bloque-titulo">3.4 Métodos de listas</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 # Lista de ejemplo
 lista_num = [1, 2, 3, 4]
 
@@ -497,7 +501,7 @@ print(numeros)   # [7, 4, 2, 1]
               <h3 class="bloque-titulo">3.5 Funciones útiles con listas</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 # len() → Devuelve la cantidad de elementos
 len([10, 20, 30])              # 3
 
@@ -534,7 +538,7 @@ list(range(5))                 # [0, 1, 2, 3, 4]
                 <strong>💡Buena práctica</strong><br />
                 Para crear listas transformadas, usá list-comprehensions: son
                 más legibles y pythonicas que un
-                <code>for</code> + <code>append</code>.
+                <code class="language-python">for</code> + <code class="language-python">append</code>.
               </aside>
             </section>
           </article>
@@ -561,7 +565,7 @@ list(range(5))                 # [0, 1, 2, 3, 4]
               </p>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
 mi_tupla = (10, 20, 30, 40)
 print(mi_tupla)          # (10, 20, 30, 40)
 print(type(mi_tupla))    # <class 'tuple'>
@@ -585,7 +589,8 @@ print(len(mi_tupla))     # 4
               <h3 class="bloque-titulo">4.2 Tupla de un solo elemento</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Para crear una tupla con un solo elemento
 tupla_uno = (5,)
 print(type(tupla_uno))   # <class 'tuple'>
@@ -598,7 +603,8 @@ print(type(tupla_uno))   # <class 'tuple'>
               <h3 class="bloque-titulo">4.3 Conversión lista ↔ tupla</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 mi_lista = [1, 2, 3]
 mi_tupla_convertida = tuple(mi_lista)
 print(mi_tupla_convertida)   # (1, 2, 3)
@@ -614,7 +620,8 @@ print(tupla_a_lista)         # [10, 20, 30, 40]
               <h3 class="bloque-titulo">4.4 Desempaquetado y tipos mixtos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 persona = ("Juan", "Pérez", 28)
 nombre, apellido, edad = persona
 
@@ -634,7 +641,8 @@ print(mezcla)
               <h3 class="bloque-titulo">4.5 Slicing y métodos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 valores = (1, 2, 3, 4, 5)
 print(valores[1:4])    # (2, 3, 4)
 print(valores[::-1])   # (5, 4, 3, 2, 1)
@@ -651,7 +659,8 @@ print(numeros.index(3))  # 3
               <h3 class="bloque-titulo">4.6 Tuplas anidadas y uso típico</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 anidada = (1, (2, 3), (4, 5, 6))
 print(anidada[1][1])   # 3
 
@@ -695,7 +704,8 @@ print(x, y)            # 35.6 42.1
               <h3 class="bloque-titulo">5.1 Concepto y creación</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Set con elementos
 mi_set = {"Juan", 20, True}
 print("Set inicial:", mi_set)
@@ -714,7 +724,8 @@ print("Set vacío:", set_vacio)
               <h3 class="bloque-titulo">5.2 Agregar y eliminar elementos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # AGREGAR ELEMENTOS
 mi_set.add("Python")
 print("Después de add('Python'):", mi_set)
@@ -747,7 +758,8 @@ print("Set luego de clear():", mi_set)
               <h3 class="bloque-titulo">5.3 Operaciones entre sets</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 set1 = {1, 2, 3, 4}
 set2 = {3, 4, 5, 6}
 
@@ -775,7 +787,8 @@ print("Diferencia simétrica (set1 ^ set2):", dif_simetrica)
               <h3 class="bloque-titulo">5.3 Operaciones entre sets</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 set1 = {1, 2, 3, 4}
 set2 = {3, 4, 5, 6}
 
@@ -803,7 +816,8 @@ print("Diferencia simétrica (set1 ^ set2):", dif_simetrica)
               <h3 class="bloque-titulo">5.4 Pertenencia e inmutabilidad</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("'Python' in set1:", "Python" in set1)
 print("3 in set1:", 3 in set1)
 
@@ -824,7 +838,8 @@ print("Set válido:", set_valido)
               </h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 lista = [1, 1, 2, 3, 3, 4]
 set_unico = set(lista)
 print("Set sin duplicados:", set_unico)
@@ -844,11 +859,16 @@ print("Lista sin duplicados:", lista_sin_dupes)
               <span class="capitulo-indice">06</span>
               <h2 class="capitulo-titulo">Diccionarios</h2>
               <p class="capitulo-intro">
-                Los diccionarios funcionan con estructura <code>clave: valor</code>. 
+                Los diccionarios funcionan con estructura <code class="language-python">
+clave: valor</code>. 
               <ul class="capitulo-lista">
                 <li>Las claves deben ser inmutables
-                (<code>str</code>, <code>int</code>,<code> float</code
-                >,<code>tuple</code>)</li>
+                (<code class="language-python">
+str</code>, <code class="language-python">
+int</code>,<code class="language-python">
+ float</code
+                >,<code class="language-python">
+tuple</code>)</li>
                 <li>Los valores pueden ser cualquier cosa:
                 listas, funciones, diccionarios, etc.</li>
               </ul>
@@ -860,7 +880,8 @@ print("Lista sin duplicados:", lista_sin_dupes)
               <h3 class="bloque-titulo">6.1 Concepto y creación</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 diccionario = {
     "nombre": "Juani",
     "edad": 25,
@@ -878,7 +899,8 @@ print("DICCIONARIO INICIAL:", diccionario)
               <h3 class="bloque-titulo">6.2 Acceder a valores</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n--- ACCESO A VALORES ---")
 print("Nombre:", diccionario["nombre"])
 print("Edad:", diccionario.get("edad"))  # Uso de .get para evitar errores
@@ -888,7 +910,8 @@ print("Intento de clave inexistente:", diccionario.get("altura", "No existe"))
 
               <aside class="nota nota-buena">
                 <strong>💡Buena práctica</strong><br />
-                Usá <code>dict.get(clave,valor_por_defecto)</code> cuando no estás seguro de si la clave existe.Evitás <em>KeyError</em>.
+                Usá <code class="language-python">
+dict.get(clave,valor_por_defecto)</code> cuando no estás seguro de si la clave existe.Evitás <em>KeyError</em>.
               </aside>
             </section>
 
@@ -897,7 +920,8 @@ print("Intento de clave inexistente:", diccionario.get("altura", "No existe"))
               <h3 class="bloque-titulo">6.3 Agregar, modificar y eliminar</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # AGREGAR Y MODIFICAR
 diccionario["ciudad"] = "Mar del Plata"   # Crear
 diccionario["edad"] = 26                  # Modificar
@@ -920,10 +944,12 @@ print("Estado actual:", diccionario)
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">6.4 Métodos útiles y <code>update</code></h3>
+              <h3 class="bloque-titulo">6.4 Métodos útiles y <code class="language-python">
+update</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n--- MÉTODOS ÚTILES ---")
 print("Claves:", list(diccionario.keys()))
 print("Valores:", list(diccionario.values()))
@@ -939,10 +965,12 @@ print("\nDespués de update:", diccionario)
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">6.5 <code>setdefault</code> y copias</h3>
+              <h3 class="bloque-titulo">6.5 <code class="language-python">
+setdefault</code> y copias</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 diccionario.setdefault("nacionalidad", "Argentina")
 diccionario.setdefault("nombre", "No reemplaza")
 print("\nDespués de setdefault:", diccionario)
@@ -960,7 +988,8 @@ print("Copia modificada:", copia)
               <h3 class="bloque-titulo">6.6 Diccionarios anidados</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 mochila = {
     "calculadora": {
         "marca": "Casio",
@@ -998,10 +1027,12 @@ for categoria, contenido in mochila.items():
 
              <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">6.7 Crear diccionarios con <code>dict</code> y funciones como valores</h3>
+              <h3 class="bloque-titulo">6.7 Crear diccionarios con <code class="language-python">
+dict</code> y funciones como valores</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 auto = dict(marca="Peugeot", modelo=206, anio=2010)
 print("\nAuto:", auto)
 
@@ -1028,7 +1059,8 @@ print("Última operación:", calculadora["ultima_operacion"])
               <h3 class="bloque-titulo">6.8 Dict comprehension y comprobaciones</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 numeros = [1, 2, 3, 4, 5]
 cuadrados = {n: n**2 for n in numeros}
 print("\nCuadrados:", cuadrados)
@@ -1044,7 +1076,8 @@ print("¿'ruedas' está en auto?:", "ruedas" in auto)
               <h3 class="bloque-titulo">6.9 Ordenar, convertir y crear desde listas/tuplas</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 ordenado_clave = dict(sorted(diccionario.items()))
 print("\nOrdenado por clave:", ordenado_clave)
 
@@ -1083,7 +1116,8 @@ print("Después de clear:", temporal)
               <h3 class="bloque-titulo">6.10 JSON ↔ dict</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 import json
 
 dic = {"nombre": "Juani", "curso": "Python"}
@@ -1116,7 +1150,8 @@ print("JSON vuelto a dict:", dic2)
               <h3 class="bloque-titulo">7.1 If, if/else, if/elif/else</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # IF simple
 edad = 20
 if edad >= 18:
@@ -1146,7 +1181,8 @@ else:
               <h3 class="bloque-titulo">7.2 Operadores lógicos y comparaciones</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Operadores lógicos (and, or, not)
 
 usuario = "Juani"
@@ -1186,7 +1222,8 @@ print(a < b)
               <h3 class="bloque-titulo">7.3 Condicionales anidados y operador ternario</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 edad = 30
 tiene_documento = True
 
@@ -1208,10 +1245,12 @@ print(resultado)
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">7.4 Verificar existencias y <code>pass</code></h3>
+              <h3 class="bloque-titulo">7.4 Verificar existencias y <code class="language-python">
+pass</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Verificar existencia en colecciones
 
 frutas = ["manzana", "banana", "pera"]
@@ -1250,7 +1289,8 @@ if x > 5:
               <h3 class="bloque-titulo">8.1 For básico y recorrer colecciones</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n=== FOR BÁSICO ===")
 for i in range(5):   # 0..4
     print(i)
@@ -1284,10 +1324,12 @@ for n in numeros:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">8.2 <code>range()</code></h3>
+              <h3 class="bloque-titulo">8.2 <code class="language-python">
+range()</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n=== USO DE range() ===")
 print(list(range(5)))          # 0..4
 print(list(range(1, 6)))       # 1..5
@@ -1302,7 +1344,8 @@ print(list(range(10, 0, -1)))  # 10..1
               <h3 class="bloque-titulo">8.3 While y validación</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n=== WHILE BÁSICO ===")
 contador = 0
 while contador < 3:
@@ -1322,16 +1365,21 @@ while True:
       </pre>
               <aside class="nota nota-error">
                 <strong>❌ Error común</strong><br />
-                <p>Olvidar actualizar la variable de control en un <code>while</code> puede producir un <em>bucle infinito</em>.</p>
+                <p>Olvidar actualizar la variable de control en un <code class="language-python">
+while</code> puede producir un <em>bucle infinito</em>.</p>
               </aside>
             </section>
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">8.4 <code>break</code>,<code>continue</code> y <code>else</code> en bucles</h3>
+              <h3 class="bloque-titulo">8.4 <code class="language-python">
+break</code>,<code class="language-python">
+continue</code> y <code class="language-python">
+else</code> en bucles</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n=== BREAK ===")
 for n in range(10):
     if n == 5:
@@ -1367,7 +1415,8 @@ else:
               <h3 class="bloque-titulo">8.5 Bucles anidados y list comprehensions</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 print("\n=== BUCLES ANIDADOS ===")
 for i in range(3):
     for j in range(2):
@@ -1404,7 +1453,8 @@ print("Mayúsculas:", letras_mayus)
               <h3 class="bloque-titulo">9.1 Función básica, parámetros y retorno</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Función básica sin parámetros
 def saludar():
     print("Hola desde una función simple")
@@ -1432,7 +1482,8 @@ print("Resultado de la suma:", resultado)
               <h3 class="bloque-titulo">9.2 Valores por defecto y argumentos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Parámetros con valores por defecto
 def presentar(nombre="Invitado", edad=0):
     print(f"Nombre: {nombre}, Edad: {edad}")
@@ -1452,10 +1503,13 @@ print(resta(b=20, a=50))     # keyword arguments
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">9.3 <code>*args</code> y <code>**kwargs</code></h3>
+              <h3 class="bloque-titulo">9.3 <code class="language-python">
+*args</code> y <code class="language-python">
+**kwargs</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # *args → argumentos posicionales variables
 def suma_total(*numeros):
     print("Números recibidos:", numeros)
@@ -1477,7 +1531,8 @@ mostrar_info(nombre="Juani", edad=28, lenguaje="Python")
               <h3 class="bloque-titulo">9.4 Combinación completa de argumentos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 def ejemplo_completo(a, b, *args, c, d=10, **kwargs):
     print("a:", a)
     print("b:", b)
@@ -1496,7 +1551,8 @@ ejemplo_completo(10, 20, 30, 40, c=100, nivel="Junior", activo=True)
               <h3 class="bloque-titulo">9.5 Lambdas y diccionario de funciones</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Funciones lambda (anónimas)
 cuadrado = lambda x: x * x
 print("Cuadrado de 5:", cuadrado(5))
@@ -1523,7 +1579,8 @@ print("Calc dividir:", calculadora["dividir"](10, 2))
               <h3 class="bloque-titulo">9.6 Variables locales y globales</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 contador = 0
 
 def aumentar():
@@ -1537,7 +1594,8 @@ print("Contador global:", contador)
       </pre>
           <aside class="nota nota-error">
             <strong>❌ Error común</strong><br />
-            <p>Abusar de <code>global</code> hace el código difícil de mantener.
+            <p>Abusar de <code class="language-python">
+global</code> hace el código difícil de mantener.
             Es preferible devolver valores y pasarlos como parámetros.
               </p></aside>
             </section>
@@ -1547,7 +1605,8 @@ print("Contador global:", contador)
               <h3 class="bloque-titulo">9.7 Docstrings</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 def multiplicar(a, b):
     """
     Multiplica dos números y retorna el resultado.
@@ -1566,7 +1625,8 @@ print("Docstring:", multiplicar.__doc__)
               <h3 class="bloque-titulo">9.8 Argumentos solo posicionales y solo por nombre</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Argumentos solo posicionales (/)
 # Todo argumento antes de "/" es POSICIONAL obligatorio.
 def solo_posicional(a, b, /):
@@ -1609,7 +1669,8 @@ combinado(1, 2, 3, d=50, e=999)
               <h3 class="bloque-titulo">10.1 Clase básica y constructor</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # 1. Clase básica
 class Persona:
     pass
@@ -1632,7 +1693,8 @@ p = Persona("Juani", 28)
               <h3 class="bloque-titulo">10.2 Métodos de instancia</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 class Persona:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -1651,7 +1713,8 @@ p.saludar()
               <h3 class="bloque-titulo">10.3 Atributos públicos, protegidos y privados</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Atributos públicos
 class Auto:
     def __init__(self, marca):
@@ -1675,10 +1738,12 @@ class Usuario:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">10.4 Getters, setters y <code>@property</code></h3>
+              <h3 class="bloque-titulo">10.4 Getters, setters y <code class="language-python">
+@property</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Getter y Setter
 class Producto:
     def __init__(self, precio):
@@ -1713,7 +1778,8 @@ class Producto:
               <h3 class="bloque-titulo">10.5 Métodos de clase y estáticos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Método de clase @classmethod
 class Usuario:
     tipo = "Normal"
@@ -1733,10 +1799,12 @@ class Utilidades:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">10.6 Herenci, <code>super()</code> y polimorfismo </h3>
+              <h3 class="bloque-titulo">10.6 Herenci, <code class="language-python">
+super()</code> y polimorfismo </h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Herencia
 class Animal:
     def hablar(self):
@@ -1770,10 +1838,12 @@ class Aguila(Pajaro):
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">10.7 <code>__str__ y __repr__</code></h3>
+              <h3 class="bloque-titulo">10.7 <code class="language-python">
+__str__ y __repr__</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 class Persona:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -1807,10 +1877,12 @@ class Punto:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">11.1 Errores y <code>try/except</code> básico</h3>
+              <h3 class="bloque-titulo">11.1 Errores y <code class="language-python">
+try/except</code> básico</h3>
           
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Error sin manejar
 # print(10 / 0)   # ZeroDivisionError
 
@@ -1828,7 +1900,8 @@ except ZeroDivisionError:
               <h3 class="bloque-titulo">11.2 Capturar excepciones y usar variables</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Capturar cualquier excepción
 try:
     x = int("abc")
@@ -1846,10 +1919,13 @@ except ValueError as error:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">11.3 <code>else</code> y <code>finally</code></h3>
+              <h3 class="bloque-titulo">11.3 <code class="language-python">
+else</code> y <code class="language-python">
+finally</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # else: se ejecuta si NO hubo error
 try:
     x = int("10")
@@ -1874,7 +1950,8 @@ finally:
               <h3 class="bloque-titulo">11.4 Múltiples excepciones y agrupación</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Múltiples excepciones
 try:
     x = int("abc")
@@ -1895,10 +1972,12 @@ except (ValueError, TypeError):
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">11.5 <code>raise</code> y excepciones personalizadas</h3>
+              <h3 class="bloque-titulo">11.5 <code class="language-python">
+raise</code> y excepciones personalizadas</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # raise
 def validar_edad(edad):
     if edad < 0:
@@ -1922,10 +2001,12 @@ def validar_edad(edad):
             
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">11.6 Excepciones y funciones, <code>assert</code> y relazar</h3>
+              <h3 class="bloque-titulo">11.6 Excepciones y funciones, <code class="language-python">
+assert</code> y relazar</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # try / except en funciones
 def dividir(a, b):
     try:
@@ -1968,7 +2049,8 @@ except ValueError:
             <strong>💡 Buenas prácticas con excepciones</strong><br />
               <ul>
                 <li>Capturá errores específicos siempre que puedas.</li>
-                <li>Evitá <code>except:</code> vacío.</li>
+                <li>Evitá <code class="language-python">
+except:</code> vacío.</li>
                 <li>No ocultes errores graves sin al menos loguearlos.</li>
               </ul>
             </aside>
@@ -1990,10 +2072,12 @@ except ValueError:
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">12.1 Concepto e <code>imports</code> básicos</h3>
+              <h3 class="bloque-titulo">12.1 Concepto e <code class="language-python">
+imports</code> básicos</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # Importar un módulo completo
 import math
 
@@ -2026,7 +2110,8 @@ from math import sin, cos, tan
               <h3 class="bloque-titulo">12.2 Crear y usar tu propio módulu</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # [utils.py](http://utils.py)
 def sumar(a, b):
     return a + b
@@ -2050,10 +2135,12 @@ print(sumar(10, 10))
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">12.3 <code>__name__</code> y bloque principal</h3>
+              <h3 class="bloque-titulo">12.3 <code class="language-python">
+__name__</code> y bloque principal</h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 # archivo [principal.py](http://principal.py)
 print(__name__)
 
@@ -2065,10 +2152,12 @@ if __name__ == "__main__":
 
             <!-- BLOQUE -->
             <section class="bloque">
-              <h3 class="bloque-titulo">12.4 Paquetes y <code>__init__.py</code></h3>
+              <h3 class="bloque-titulo">12.4 Paquetes y <code class="language-python">
+__init__.py</code></h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 mi_paquete/
 ├── __init__.py
 ├── [operaciones.py](http://operaciones.py)
@@ -2088,7 +2177,8 @@ print("Paquete cargado")
               <h3 class="bloque-titulo">12.5 Módulos estándar comunes y utilidades </h3>
 
               <pre class="bloque-codigo">
-<code>
+<code class="language-python">
+
 import sys       # sistema
 import os        # sistema operativo
 import datetime  # fechas
@@ -2140,7 +2230,15 @@ importlib.reload(utils)
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
     <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+    
+<script>
+  AOS.init();
+</script>
   </body>
 </html>
